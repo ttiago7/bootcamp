@@ -47,7 +47,7 @@ function App() {
                     color={"#4ce69f"}
                     textShadow="3px 2px #443232"
                   >
-                    ¡Bienvenido!
+                    ¡Logeate!
                   </Text>
                   <Box borderRadius="50%" border="2px solid #52b788">
                     <Logo />
@@ -68,7 +68,7 @@ function App() {
                       <EmailIcon color="#fff" />
                     </Flex>
                   </FormControl>
-                  <FormControl id="password">
+                  <FormControl id="password" mb={"10px"}>
                     <FormLabel m="4px 0 0 0" color="white">
                       Contraseña
                     </FormLabel>
@@ -101,10 +101,10 @@ function App() {
                     h="35px"
                     isFullWidth
                     type="submit"
-                    bgColor="#1b74e4"
+                    bgColor="#24c924"
                     color="white"
                     _active={active}
-                    _hover={{ boxShadow: "0 0 2px white" }}
+                    _hover={{ boxShadow: "0 0 3px green" }}
                   >
                     Iniciar Sesion
                   </Button>
@@ -113,20 +113,17 @@ function App() {
                   <Stack
                     direction={{ base: "column", sm: "row" }}
                     align={"start"}
-                    justify={"space-between"}
+                    justify={"center"}
                   >
-                    <Link mt={2} color="#999999" _hover={{ color: "white" }}>
+                    <Link mt={2} color="#fff" _hover={{ color: "#999999" }}>
                       ¿Olvidaste tu contraseña?
                     </Link>
                   </Stack>
-                  <Text
-                    fontSize="16px"
-                    color="white"
-                    as="em"
-                    fontWeight="semibold"
-                  >
-                    ¿No tienes una cuenta?{" "}
-                    <Link color="#2ce62c">Registrarse</Link>
+                  <Text fontSize="16px" color="white" as="em">
+                    ¿No tienes una cuenta?
+                    <Link color="#2ce62c" fontWeight="semibold">
+                      Registrarse
+                    </Link>
                   </Text>
                 </Stack>
               </Stack>
