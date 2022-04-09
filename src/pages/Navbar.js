@@ -3,7 +3,7 @@ import { FaHome, FaUsers, FaWpforms } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
 import { Box, Button, Container, Flex, Heading, Link } from "@chakra-ui/react";
 // import logo from "../assets/images/logoFares.jpeg";
-import Logo from "../assets/images/fares-bgBlack.jpeg";
+import Logo from "../components/Logo";
 
 const Navbar = () => {
   return (
