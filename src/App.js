@@ -6,8 +6,8 @@ const App = () => {
   return (
     <>
       <Router>
+        <NavbarAdmin />
         <Navbar />
-        {/* <NavbarAdmin /> */}
         <AppRoute />
       </Router>
     </>
