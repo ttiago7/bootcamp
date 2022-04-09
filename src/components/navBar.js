@@ -6,7 +6,8 @@ import {
   Navbar,
   NavDropdown,
 } from "react-bootstrap";
-import logo from "../assets/images/logoFares.jpeg";
+// import logo from "../assets/images/logoFares.jpeg";
+import logo from "../assets/images/fares-bgBlack.jpeg";
 
 const navBar = () => {
   return (
