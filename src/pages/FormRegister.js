@@ -7,12 +7,14 @@ import {
   Flex,
   FormControl,
   Stack,
-  Link,
   Text,
+  FormLabel,
 } from "@chakra-ui/react";
 import Logo from "../components/Logo";
 import { EmailIcon, ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { BsFillPersonFill } from "react-icons/bs";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebookF } from "react-icons/fa";
 import { useState } from "react";
 function App() {
   const [show, setShow] = useState(false);
@@ -50,14 +52,17 @@ function App() {
                     color={"#4ce69f"}
                     textShadow="3px 2px #443232"
                   >
-                    ¡Bienvenido!
+                    ¡Regristate!
                   </Text>
                   <Box borderRadius="50%" border="2px solid #52b788">
                     <Logo />
                   </Box>
                 </Flex>
                 <form onSubmit={formik.handleSubmit}>
-                  <FormControl mb={1} id="name">
+                  <FormControl id="name">
+                    <FormLabel m="0" color="white">
+                      Nombre Completo
+                    </FormLabel>
                     <Flex alignItems="baseline" gap={4}>
                       <TextField
                         name="name"
@@ -69,6 +74,9 @@ function App() {
                     </Flex>
                   </FormControl>
                   <FormControl mb={1} id="email">
+                    <FormLabel m="0" color="white">
+                      Correo
+                    </FormLabel>
                     <Flex alignItems="baseline" gap={4}>
                       <TextField
                         name="email"
@@ -80,6 +88,9 @@ function App() {
                     </Flex>
                   </FormControl>
                   <FormControl mb={3} id="password">
+                    <FormLabel m="0" color="white">
+                      contraseña
+                    </FormLabel>
                     <Flex alignItems="baseline" gap={4}>
                       <TextField
                         name="password"
@@ -104,6 +115,33 @@ function App() {
                       </Box>
                     </Flex>
                   </FormControl>
+                  <Text
+                    fontSize="15px"
+                    fontWeight="semibold"
+                    color={"#fff"}
+                    pb={"10px"}
+                    justifyContent={"center"}
+                  >
+                    O registrate con:
+                  </Text>
+                  <Flex justifyContent={"center"} gap={"30px"} pb={"8px"}>
+                    <Box
+                      bgColor={"#fff"}
+                      borderRadius="90%"
+                      p={2}
+                      cursor="pointer"
+                    >
+                      <FcGoogle color="#fff" fontSize={"30px"} />
+                    </Box>
+                    <Box
+                      bgColor={"#168aad"}
+                      borderRadius="90%"
+                      p={2}
+                      cursor="pointer"
+                    >
+                      <FaFacebookF color="#fff" fontSize={"30px"} />
+                    </Box>
+                  </Flex>
                   <Button
                     mt={1.5}
                     color="white"
@@ -123,9 +161,7 @@ function App() {
                   color={"#1b74e4"}
                   as="em"
                   fontWeight="semibold"
-                >
-                  <Link>Iniciar Sesion</Link>
-                </Box>
+                ></Box>
               </Stack>
             </Box>
           </Stack>
