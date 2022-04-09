@@ -1,15 +1,17 @@
 import React from "react";
-import HomePage from "./pages/HomePage";
-import FormLogin from "./pages/FormLogin";
-import FormRegister from "./pages/FormRegister";
-import NavbarAdmin from "./pages/NavbarAdmin";
+// import HomePage from "./pages/HomePage";
+// import FormLogin from "./pages/FormLogin";
+// import FormRegister from "./pages/FormRegister";
+// import NavbarAdmin from "./pages/NavbarAdmin";
+import Navbar from "./pages/Navbar";
 const App = () => {
   return (
     <>
-      <NavbarAdmin />
-      <HomePage />
+      {/* <NavbarAdmin /> */}
+      <Navbar />
+      {/* <HomePage />
       <FormLogin />
-      <FormRegister />
+      <FormRegister /> */}
     </>
   );
 };
