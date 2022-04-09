@@ -16,7 +16,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import { useState } from "react";
-function App() {
+function FormRegister() {
   const [show, setShow] = useState(false);
 
   const active = {
@@ -170,4 +170,4 @@ function App() {
     </Formik>
   );
 }
-export default App;
+export default FormRegister;

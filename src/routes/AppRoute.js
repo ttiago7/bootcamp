@@ -5,8 +5,8 @@ import CreatePost from "../pages/CreatePost";
 import Cv from "../pages/Cv";
 import HomePage from "../pages/HomePage";
 import Nosotros from "../pages/Nosotros";
-import FormLogin from "../pages/FormRegister";
-import FormRegister from "../pages/FormLogin";
+import FormLogin from "../pages/FormLogin";
+import FormRegister from "../pages/FormRegister";
 const AppRoute = () => {
   return (
     <>
