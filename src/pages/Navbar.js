@@ -1,5 +1,5 @@
 import { FaHome, FaUsers, FaWpforms } from "react-icons/fa";
-import { IoIosAddCircle } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
 import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
@@ -51,7 +51,7 @@ const Navbar = () => {
                 as="abbr"
                 fontWeight="semibold"
               >
-                <IoIosAddCircle />
+                <FaPhoneAlt />
                 Contactanos
               </Text>
             </Link>
@@ -72,24 +72,22 @@ const Navbar = () => {
                 Nosotros
               </Text>
             </Link>
-            <Link to="/login">
-              <Box bgColor="#0069fa" p="7px" borderRadius="6px">
+            <Box _active={active} bgColor="#0069fa" p="7px" borderRadius="6px">
+              <Link to="/login">
                 <Text
                   fontWeight="semibold"
-                  _active={active}
                   d="flex"
                   alignItems="center"
                   gap={1}
                 >
                   <FaWpforms /> Login
                 </Text>
-              </Box>
-            </Link>
-            <Link to="/register">
-              <Box bgColor="green" p="7px" borderRadius="6px">
+              </Link>
+            </Box>
+            <Box _active={active} bgColor="green" p="7px" borderRadius="6px">
+              <Link to="/register">
                 <Text
                   fontWeight="semibold"
-                  _active={active}
                   d="flex"
                   alignItems="center"
                   gap={1}
@@ -97,8 +95,8 @@ const Navbar = () => {
                   <FaWpforms />
                   Register
                 </Text>
-              </Box>
-            </Link>
+              </Link>
+            </Box>
           </Flex>
         </Flex>
       </Container>
