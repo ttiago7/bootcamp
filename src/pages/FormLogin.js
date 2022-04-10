@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import Logo from "../components/Logo";
 import { useState } from "react";
-function FormLogin() {
+const FormLogin = () => {
   const [show, setShow] = useState(false);
 
   const active = {
@@ -133,5 +133,5 @@ function FormLogin() {
       )}
     </Formik>
   );
-}
+};
 export default FormLogin;
