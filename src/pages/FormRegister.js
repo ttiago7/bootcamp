@@ -15,7 +15,7 @@ import Logo from "../components/Logo";
 import { EmailIcon, ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { BsFillPersonFill } from "react-icons/bs";
 import { useState } from "react";
-import ButtonsRegister from "../components/ButtonsRegister";
+import ButtonLogin from "../components/ButtonLogin";
 const FormRegister = () => {
   const [show, setShow] = useState(false);
   const active = {
@@ -51,7 +51,7 @@ const FormRegister = () => {
                   color={"#4ce69f"}
                   textShadow="3px 2px #443232"
                 >
-                  ¡Regristate!
+                  ¡Registrate!
                 </Text>
                 <Box borderRadius="50%" border="2px solid #52b788">
                   <Logo />
@@ -128,7 +128,7 @@ const FormRegister = () => {
                 </Button>
               </form>
               <Divider m="1.3rem 0" />
-              <ButtonsRegister />
+              <ButtonLogin />
             </Box>
           </Stack>
         </Flex>
