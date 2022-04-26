@@ -1,9 +1,9 @@
 import React from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
-const ButtonLogin = () => {
+const LoginRegister = () => {
   return (
     <>
       <Flex flexDirection="column" gap={4}>
@@ -35,4 +35,4 @@ const ButtonLogin = () => {
     </>
   );
 };
-export default ButtonLogin;
+export default LoginRegister;

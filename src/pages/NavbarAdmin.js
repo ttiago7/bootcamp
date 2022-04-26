@@ -1,39 +1,56 @@
-import { FaHome, FaUsers, FaWpforms } from "react-icons/fa";
-import { IoIosAddCircle } from "react-icons/io";
-import { Box, Container, Flex, Text } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ButtonPerfil from "../components/ButtonPerfil";
+import { ReactDimmer } from "react-dimmer";
 import BigLogo from "../components/BigLogo";
-import { navbar } from "../components/_styles";
+import SlideBar from "../components/SlideBar";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { linksNavbarAdmin } from "../data/links";
+import { navbarstyles } from "../components/_styles";
+import PerfilButton from "../components/PerfilButton";
+import { Box, Container, Flex, Text } from "@chakra-ui/react";
+
 const NavbarAdmin = () => {
-  const items = [
-    { id: 1, link: "/post", name: "Crear Post", icon: <IoIosAddCircle /> },
-    { id: 2, link: "/", name: "Home", icon: <FaHome /> },
-    { id: 3, link: "/nosotros", name: "Nosotros", icon: <FaUsers /> },
-  ];
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <Box bgGradient="linear(to-l, #1ca183,#4acf86)" color="black" p="1rem">
-      <Container maxWidth="90%">
-        <Flex justifyContent="space-between">
+    <Box bgGradient="linear(to-l, #1ca183,#4acf86)" color="black" m="0">
+      <Container maxWidth="90%" p="1rem 0">
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          flexDirection={["row-reverse", "row-reverse", "row", "row"]}
+        >
+          <Box d={["unset", "unset", "none", "none"]}>
+            <PerfilButton />
+          </Box>
           <BigLogo />
-          <Flex alignItems="center" gap={6}>
-            {items.map((item) => (
+          <Flex
+            alignItems="center"
+            gap={4}
+            d={["none", "none", "flex", "flex"]}
+          >
+            {linksNavbarAdmin.map((item) => (
               <Link to={item.link} key={item.id}>
-                <Text style={navbar.navbarLink} gap="4px" _hover={navbar.hover}>
+                <Text
+                  style={navbarstyles.navbarLink}
+                  gap="4px"
+                  _hover={navbarstyles.hover}
+                >
                   {item.icon}
                   {item.name}
                 </Text>
               </Link>
             ))}
-            <Box bgColor="green" p="7px" borderRadius="6px">
-              <Link to="/cv">
-                <Text style={navbar.navbarLink} _active={navbar.active} gap={1}>
-                  <FaWpforms /> Subir CV
-                </Text>
-              </Link>
-            </Box>
-            <ButtonPerfil />
+            <PerfilButton />
           </Flex>
+          <Box display={["unset", "unset", "none", "none"]}>
+            <GiHamburgerMenu onClick={() => setMenuOpen(!menuOpen)} />
+            <SlideBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <ReactDimmer
+              isOpen={menuOpen}
+              exitDimmer={setMenuOpen}
+              zIndex={100}
+            />
+          </Box>
         </Flex>
       </Container>
     </Box>

@@ -1,6 +1,11 @@
-import { Formik } from "formik";
+import React, { useState } from "react";
 import * as Yup from "yup";
+import { Formik } from "formik";
+import Logo from "../components/Logo";
 import TextField from "../components/TextField";
+import { BsFillPersonFill } from "react-icons/bs";
+import LoginRegister from "../components/LoginRegister";
+import { EmailIcon, ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -8,20 +13,15 @@ import {
   FormControl,
   Stack,
   Text,
-  FormLabel,
   Divider,
 } from "@chakra-ui/react";
-import Logo from "../components/Logo";
-import { EmailIcon, ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import { BsFillPersonFill } from "react-icons/bs";
-import { useState } from "react";
-import ButtonLogin from "../components/ButtonLogin";
+import { Link } from "react-router-dom";
+
 const FormRegister = () => {
   const [show, setShow] = useState(false);
   const active = {
     transform: "scale(0.96)",
   };
-
   return (
     <Formik
       initialValues={{ name: "", email: "", password: "" }}
@@ -54,14 +54,11 @@ const FormRegister = () => {
                   ¡Registrate!
                 </Text>
                 <Box borderRadius="50%" border="2px solid #52b788">
-                  <Logo />
+                  <Logo height="55px" width="50px" />
                 </Box>
               </Flex>
               <form onSubmit={formik.handleSubmit}>
                 <FormControl id="name">
-                  <FormLabel m="0" color="white">
-                    Nombre Completo
-                  </FormLabel>
                   <Flex alignItems="baseline" gap={4}>
                     <TextField
                       name="name"
@@ -73,9 +70,6 @@ const FormRegister = () => {
                   </Flex>
                 </FormControl>
                 <FormControl mb={1} id="email">
-                  <FormLabel m="0" color="white">
-                    Correo
-                  </FormLabel>
                   <Flex alignItems="baseline" gap={4}>
                     <TextField
                       name="email"
@@ -87,9 +81,6 @@ const FormRegister = () => {
                   </Flex>
                 </FormControl>
                 <FormControl mb={3} id="password">
-                  <FormLabel m="0" color="white">
-                    Contraseña
-                  </FormLabel>
                   <Flex alignItems="baseline" gap={4}>
                     <TextField
                       name="password"
@@ -115,9 +106,9 @@ const FormRegister = () => {
                   </Flex>
                 </FormControl>
                 <Button
-                  mt={1.5}
+                  m="4px 0 6px"
                   color="white"
-                  isFullWidth
+                  w="87%"
                   type="submit"
                   h="35px"
                   bgColor="#24c924"
@@ -127,8 +118,13 @@ const FormRegister = () => {
                   Registrarse
                 </Button>
               </form>
-              <Divider m="1.3rem 0" />
-              <ButtonLogin />
+              <Link to="/login">
+                <Text color="white" textDecoration="underline">
+                  Inicia Sesion!
+                </Text>
+              </Link>
+              <Divider m="1rem 0" />
+              <LoginRegister />
             </Box>
           </Stack>
         </Flex>
