@@ -1,17 +1,17 @@
-export const navbar = {
+export const navbarstyles = {
   navbarLink: {
     display: "flex",
     alignItems: "center",
-    fontWeight: "600",
+    fontWeight: "500",
+    fontSize: "17px",
   },
   hover: {
     fontWeight: "bold",
-    fontSize: "17px",
+    fontSize: "19px",
     color: "#fdfffc",
   },
   buttons: {
     padding: "7px",
-    backgroundColor: "green",
     borderRadius: "6px",
   },
   active: {
