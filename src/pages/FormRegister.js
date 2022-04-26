@@ -41,7 +41,7 @@ const FormRegister = () => {
     >
       {(formik) => (
         <Flex minH={"100vh"} align={"center"} justify={"center"}>
-          <Stack spacing={2} mx={"auto"} maxW={"lg"} px={8}>
+          <Stack spacing={2} mx={"auto"} maxW={"lg"}>
             <Box bg={"#161a1d"} rounded={"lg"} p={6} boxShadow={"dark-lg"}>
               <Flex alignItems="center" flexDirection="column-reverse">
                 <Text
